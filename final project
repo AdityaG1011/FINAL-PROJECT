@@ -63,6 +63,20 @@ this.size=size;
 this.shapeType=shapeType;
 this.color=color;
 }
+
+
+isMouseOver() {
+    return dist(mouseX, mouseY, this.x, this.y) < this.size / 2;
+  }
+
+  isNear(target) {
+    return dist(this.x, this.y, target.x, target.y) < targetSize / 2;
+  }
+
+  lockToTarget(target) {
+    this.x = target.x;
+    this.y = target.y;
+  }
     }
   }
 }
